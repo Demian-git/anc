@@ -3,6 +3,7 @@
     1/2, 1/4 , 1/2 sound source
     1/2 , 2/4 , 1/2 speaker
     1/2 , 3/4 , 1/2 error mic
+![env](./final%20result/env.png)
 -------------------------------------------------------------------------------
 ## 발표 시점(first)
     activation = ReLU
@@ -24,7 +25,10 @@
     vehicle dataset 으로 한정 (5초 단위)
     train dataset: 10000개
     eval dataset: 1000개
-
+## model
+![model](./final%20result/model.png)
+## training loop
+![train](./final%20result/training%20loop.png)
 ## 5th result
     activation = ReLU
     batchnorm 적용
