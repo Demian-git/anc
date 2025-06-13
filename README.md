@@ -8,7 +8,8 @@
     activation = ReLU
     batchnorm 적용
     데이터 길이 1초
-    ![first result](./result/first.png)
+
+![first result](./result/first.png)
 -----------------------------------------------------------------------------------
 ## 발표 시점에서 추측한 것
     skip connection이 입출력의 시간축이 맞지 않아 좋지 않은 영향을 미칠거라고 생각했으나 skip connection을 빼니 오히려 더 NMSE가 증가하는 모습을 보임 -> skip을 적용하는게 성능이 훨씬 도움이 됨
@@ -28,15 +29,15 @@
     activation = ReLU
     batchnorm 적용
     5th 부터 데이터 길이 5초로 늘림
-    ![5th](./result/5th.png)
+![5th](./result/5th.png)
 ## 6th result
     activation = ReLU
     batchnorm 삭제 , 이미 입출력이 특정 범위로 제한되어 있어 불필요 하고, 제거하니 성능이 더 오름
-    ![6th](./result/6th.png)
+![6th](./result/6th_without_norm.png)
 ## 7th result
     activation = ELU
     batchnorm 삭제
-    ![7th](./final result/7th_ELU.png)
+![7th](./final%20result/7th_ELU.png)
 ## 이후 해볼 수 있는 것
     데이터 증강 및 epoch 늘리기
     3~8초로 가변 길이 적용, 8초까지 0 패딩
