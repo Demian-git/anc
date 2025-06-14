@@ -24,6 +24,7 @@
     vehicle dataset 으로 한정 (5초 단위)
     train dataset: 10000개
     eval dataset: 1000개
+- [vehicle dataset](https://www.kaggle.com/datasets/janboubiabderrahim/vehicle-sounds-dataset)
 ## model
 ![model](./final%20result/model.png)
 ## training loop
