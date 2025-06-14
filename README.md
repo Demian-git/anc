@@ -51,8 +51,8 @@
 ## 7th test
     final result에 마지막 결과 저장
 ![spectrogram](./final%20result/spectrogram.png)
-- [original sound](./final%20result/original.wav)
-- [primary-error sound](./final%20result/primary-error.wav)
-- [anti-noise sound](./final%20result/anti-noise.wav)
-- [final-error sound](./final%20result/final-error.wav)
+- [original sound](https://drive.google.com/file/d/1KFw8MebmZUDUihVlweYF3_y20h1feuoz/view?usp=drive_link)
+- [primary-error sound](https://drive.google.com/file/d/1pBvJaS8tMYZ1EZ_d7UvKlc0jTgw3VNvv/view?usp=drive_link)
+- [anti-noise sound](https://drive.google.com/file/d/1cxL3yAovxSmCByR5kvPBKUgtk05ISMuv/view?usp=drive_link)
+- [final-error sound](https://drive.google.com/file/d/1bcogdwfX8aHqPcE_8pBnBYKoafd_3YZW/view?usp=drive_link)
 
