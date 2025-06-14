@@ -5,11 +5,10 @@
 [논문 바로 보기 (PDF)](https://www.isca-archive.org/interspeech_2020/zhang20i_interspeech.pdf)
 ## env
     139.9416909621 186.5889212828 93.2944606414   ! RL: 방 크기
-    1/2, 1/4 , 1/2 sound source
-    1/2 , 2/4 , 1/2 speaker
-    1/2 , 3/4 , 1/2 error mic
+    sound source 위치: 1/2, 1/4 , 1/2 
+    speaker 위치: 1/2 , 2/4 , 1/2 
+    error mic 위치: 1/2 , 3/4 , 1/2 
 ![env](./final%20result/env.png)
-
 ## 발표 시점(first)
     activation = ReLU
     batchnorm 적용
@@ -20,6 +19,7 @@
     모델의 입출력의 분포를 체크 했을 때 rir 적용 후 -1.5~1.5 사이인 것을 보아 입출력에 정규화를 진행할 필요는 없어보임
 ## 성능이 좋지 않았던 진짜 이유
     단순히 eval 코드를 잘못짜서... 오류를 수정하고 데이터 길이를 5초로 늘리니 좋은 결과를 얻을 수 있었다.
+## 이후 실험 (모델 및 데이터셋 변경)
 ## dataset
     vehicle dataset 으로 한정 (5초 단위)
     train dataset: 10000개
@@ -52,6 +52,8 @@
 ## 7th test
     final result에 마지막 결과 저장
 ![spectrogram](./final%20result/spectrogram.png)
+
+## example
 - [original sound](https://drive.google.com/file/d/1KFw8MebmZUDUihVlweYF3_y20h1feuoz/view?usp=drive_link)
 - [primary-error sound](https://drive.google.com/file/d/1pBvJaS8tMYZ1EZ_d7UvKlc0jTgw3VNvv/view?usp=drive_link)
 - [anti-noise sound](https://drive.google.com/file/d/1cxL3yAovxSmCByR5kvPBKUgtk05ISMuv/view?usp=drive_link)
