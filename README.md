@@ -1,26 +1,25 @@
+## Zhang & Wang paper
+    Zhang & Wang의 논문  
+    "A Deep Learning Approach to Active Noise Control" (INTERSPEECH 2020) 
+    을 기반으로 한 ANC(Active Noise Control) 시스템을 구현한 결과입니다.
+[논문 바로 보기 (PDF)](https://www.isca-archive.org/interspeech_2020/zhang20i_interspeech.pdf)
 ## env
     139.9416909621 186.5889212828 93.2944606414   ! RL: 방 크기
     1/2, 1/4 , 1/2 sound source
     1/2 , 2/4 , 1/2 speaker
     1/2 , 3/4 , 1/2 error mic
 ![env](./final%20result/env.png)
--------------------------------------------------------------------------------
+
 ## 발표 시점(first)
     activation = ReLU
     batchnorm 적용
     데이터 길이 1초
-
 ![first result](./result/first.png)
------------------------------------------------------------------------------------
 ## 발표 시점에서 추측한 것
     skip connection이 입출력의 시간축이 맞지 않아 좋지 않은 영향을 미칠거라고 생각했으나 skip connection을 빼니 오히려 더 NMSE가 증가하는 모습을 보임 -> skip을 적용하는게 성능이 훨씬 도움이 됨
     모델의 입출력의 분포를 체크 했을 때 rir 적용 후 -1.5~1.5 사이인 것을 보아 입출력에 정규화를 진행할 필요는 없어보임
-
----------------------------------------------------------------------------------------------    
 ## 성능이 좋지 않았던 진짜 이유
     단순히 eval 코드를 잘못짜서... 오류를 수정하고 데이터 길이를 5초로 늘리니 좋은 결과를 얻을 수 있었다.
-
-------------------------------------------------------------------------------------------------------------------
 ## dataset
     vehicle dataset 으로 한정 (5초 단위)
     train dataset: 10000개
@@ -48,7 +47,12 @@
     fp16으로 빠르게 모델 학습
     ReLU를 써도 성능저하는 크지 않을 것 같음, 연산 이점을 얻을 수 있을 것 같음
 
----------------------------------------
-## 마지막결과 
+    위 과정들을 통해 논문과 같이 -9~10dB을 달성할 수 있을거라 추측됨 
+## 7th test
     final result에 마지막 결과 저장
----------------------------------------
+![spectrogram](./final%20result/spectrogram.png)
+- [original sound](./final%20result/original.wav)
+- [primary-error sound](./final%20result/primary-error.wav)
+- [anti-noise sound](./final%20result/anti-noise.wav)
+- [final-error sound](./final%20result/final-error.wav)
+
